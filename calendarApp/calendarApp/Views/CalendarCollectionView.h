@@ -11,6 +11,7 @@
 
 @protocol CalendarCollectionViewDelegate <NSObject>
 - (void)setSelectedDate:(NSDate *)selectedDate;
+    - (void)selectedMonth:(NSString*)month day:(NSString*)day;
 @end
 
 @interface CalendarCollectionView : UICollectionView<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>

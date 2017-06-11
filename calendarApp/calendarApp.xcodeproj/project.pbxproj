@@ -19,6 +19,8 @@
 		BE3A7B3B1ED3C5C300F0C4C9 /* DayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */; };
 		BE3A7B3C1ED3C5C300F0C4C9 /* DayOfWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */; };
 		BE3A7B401ED3C69B00F0C4C9 /* CalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */; };
+		BEB32B481EED13800018456A /* SelectedDay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB32B471EED13800018456A /* SelectedDay.storyboard */; };
+		BEB32B4B1EED140F0018456A /* SelectedDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +54,12 @@
 		BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCell.m; sourceTree = "<group>"; };
 		BE3A7B391ED3C5C300F0C4C9 /* DayOfWeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfWeekCell.h; sourceTree = "<group>"; };
 		BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOfWeekCell.m; sourceTree = "<group>"; };
-		BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CalendarCollectionView.h; path = CalendarCollectionView.h; sourceTree = "<group>"; };
-		BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalendarCollectionView.m; path = CalendarCollectionView.m; sourceTree = "<group>"; };
+		BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarCollectionView.h; sourceTree = "<group>"; };
+		BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarCollectionView.m; sourceTree = "<group>"; };
 		BE3A7B411ED3D33B00F0C4C9 /* NSDate_NSDate_Extension_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDate_NSDate_Extension_.h; sourceTree = "<group>"; };
+		BEB32B471EED13800018456A /* SelectedDay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectedDay.storyboard; sourceTree = "<group>"; };
+		BEB32B491EED140F0018456A /* SelectedDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedDayViewController.h; sourceTree = "<group>"; };
+		BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedDayViewController.m; sourceTree = "<group>"; };
 		C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8E52385ED92F0D52AB2708D /* Pods-calendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D8703829EDD07BE20D2FD873 /* Pods-calendarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +164,9 @@
 				BE2EEDF91ED3BCED004BFEFF /* Calendar.storyboard */,
 				BE2EEDF61ED3BCED004BFEFF /* CalendarViewController.h */,
 				BE2EEDF71ED3BCED004BFEFF /* CalendarViewController.m */,
+				BEB32B471EED13800018456A /* SelectedDay.storyboard */,
+				BEB32B491EED140F0018456A /* SelectedDayViewController.h */,
+				BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB32B481EED13800018456A /* SelectedDay.storyboard in Resources */,
 				BE2EEE001ED3BCED004BFEFF /* LaunchScreen.storyboard in Resources */,
 				BE2EEDFD1ED3BCED004BFEFF /* Assets.xcassets in Resources */,
 				BE2EEDFB1ED3BCED004BFEFF /* Calendar.storyboard in Resources */,
@@ -383,6 +392,7 @@
 				BE3A7B3B1ED3C5C300F0C4C9 /* DayCell.m in Sources */,
 				BE3A7B3C1ED3C5C300F0C4C9 /* DayOfWeekCell.m in Sources */,
 				BE2EEDF21ED3BCEC004BFEFF /* main.m in Sources */,
+				BEB32B4B1EED140F0018456A /* SelectedDayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

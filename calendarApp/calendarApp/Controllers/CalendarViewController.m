@@ -7,11 +7,14 @@
 //
 
 #import "CalendarViewController.h"
+#import "SelectedDayViewController.h"
 
 @interface CalendarViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *prevBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBtn;
 @property (weak, nonatomic) IBOutlet CalendarCollectionView *collectionV;
+@property NSString *month;
+@property NSString *day;
 
 @end
 
@@ -58,6 +61,21 @@
         self.prevBtn.enabled = NO;
     }else if ([[formatter stringFromDate:_collectionV.selectedDate]  isEqual: @"12"]){
         self.nextBtn.enabled = NO;
+    }
+}
+-(void)selectedMonth:(NSString *)month day:(NSString *)day{
+    self.month = month;
+    self.day = day;
+    NSLog(@"%@", self.day);
+    [self performSegueWithIdentifier:@"toSelectedDay" sender:self];
+}
+    
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"toSelectedDay"]) {
+        //遷移先のViewController
+        SelectedDayViewController *nextViewController = [segue destinationViewController];
+        [nextViewController setMonth:self.month];
+        [nextViewController setDay:self.day];
     }
 }
 @end

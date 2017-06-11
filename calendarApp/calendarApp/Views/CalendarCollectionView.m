@@ -159,7 +159,22 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
         
     }
 }
-
+    // Cell が選択された場合
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    __weak typeof (self) wself = self;
+    if(indexPath.section != 0){
+        NSDate *dateForCellAIP = [self dateForCellAtIndexPath:indexPath];
+        NSDateFormatter *formatter = [NSDateFormatter new];
+        formatter.dateFormat = @"MM";
+        NSString *month = [formatter stringFromDate:dateForCellAIP];
+        formatter.dateFormat = @"dd";
+        NSString *day = [formatter stringFromDate:dateForCellAIP];
+        if ([wself.delegate2 respondsToSelector:@selector(selectedMonth:day:)]) {
+            [wself.delegate2 selectedMonth:month day:day];
+        }
+    }
+}
+    
 #pragma mark - UICollectionViewDelegateFlowLayout methods
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -175,6 +190,7 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
     
     return CGSizeMake(width, height);
 }
+    
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
