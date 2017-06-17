@@ -153,6 +153,15 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
             cell.label.alpha = 1.0;
         }
         
+        __weak typeof (self) wself = self;
+        if ([wself.delegate2 respondsToSelector:@selector(isSetSchedule:)]) {
+            if([wself.delegate2 isSetSchedule:dateForCellAIP]){
+                cell.circle.hidden = NO;
+            }else{
+                cell.circle.hidden = YES;
+            }
+        }
+        
         cell.label.textColor = [self colorOfWeek:indexPath.row];
         cell.circle.textColor = [self colorOfWeek:indexPath.row];
         return cell;
@@ -173,13 +182,8 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
     __weak typeof (self) wself = self;
     if(indexPath.section != 0){
         NSDate *dateForCellAIP = [self dateForCellAtIndexPath:indexPath];
-        NSDateFormatter *formatter = [NSDateFormatter new];
-        formatter.dateFormat = @"MM";
-        NSString *month = [formatter stringFromDate:dateForCellAIP];
-        formatter.dateFormat = @"dd";
-        NSString *day = [formatter stringFromDate:dateForCellAIP];
-        if ([wself.delegate2 respondsToSelector:@selector(selectedMonth:day:)]) {
-            [wself.delegate2 selectedMonth:month day:day];
+        if ([wself.delegate2 respondsToSelector:@selector(selectedDate:)]) {
+            [wself.delegate2 selectedDate:dateForCellAIP];
         }
     }
 }

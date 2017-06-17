@@ -7,7 +7,6 @@
 //
 
 #import "SelectedDayViewController.h"
-#import "TimeTableViewProvider.h"
 
 @interface SelectedDayViewController ()
 - (IBAction)back:(id)sender;
@@ -20,9 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = [NSString stringWithFormat:@"%@/%@",self.month,self.day];
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"MM月dd日";
+    self.title = [formatter stringFromDate:self.date];
     
     self.tableView.dataSource = self.tableView;
+    self.tableView.myDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,5 +44,9 @@
 
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+    
+-(NSString *)getText:(NSInteger)hour{
+    return [self.DB getDetail:self.date hour:hour];
 }
 @end

@@ -13,8 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *prevBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBtn;
 @property (weak, nonatomic) IBOutlet CalendarCollectionViewProvider *collectionV;
-@property NSString *month;
-@property NSString *day;
+@property NSDate *date;
 
 @end
 
@@ -42,6 +41,8 @@
     self.DB = [[CalendarDatabase alloc]init];
     [self.DB SetupDB];
 }
+-(void)viewWillAppear:(BOOL)animated{
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -66,10 +67,8 @@
         self.nextBtn.enabled = NO;
     }
 }
--(void)selectedMonth:(NSString *)month day:(NSString *)day{
-    self.month = month;
-    self.day = day;
-    NSLog(@"%@", self.day);
+-(void)selectedDate:(NSDate *)date{
+    self.date = date;
     [self performSegueWithIdentifier:@"toSelectedDay" sender:self];
 }
     
@@ -77,8 +76,12 @@
     if([[segue identifier] isEqualToString:@"toSelectedDay"]) {
         //遷移先のViewController
         SelectedDayViewController *nextViewController = [segue destinationViewController];
-        [nextViewController setMonth:self.month];
-        [nextViewController setDay:self.day];
+        [nextViewController setDate:self.date];
+        [nextViewController setDB:self.DB];
     }
+}
+    
+-(BOOL)isSetSchedule:(NSDate *)date{
+    return [self.DB isSetSchedule:date];
 }
 @end

@@ -25,7 +25,17 @@
         min = 30;
     }
     cell.hour.text = [NSString stringWithFormat:@"%zd:%02zd~", hour,min];
-    cell.text.text = @"";
+    
+    
+    __weak typeof (self) wself = self;
+    NSString *text;
+    if ([wself.myDelegate respondsToSelector:@selector(getText:)]) {
+        NSString *h = [NSString stringWithFormat:@"%zd%02zd",hour,min];
+        text = [wself.myDelegate getText:[h integerValue]];
+    }
+    
+    cell.text.text = text;
+    
     return cell;
 }
 
