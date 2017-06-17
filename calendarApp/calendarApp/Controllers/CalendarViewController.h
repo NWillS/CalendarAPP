@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CalendarCollectionView.h"
+#import "CalendarCollectionViewProvider.h"
+#import "CalendarDatabase.h"
 
-@interface CalendarViewController : UIViewController<CalendarCollectionViewDelegate>
+@interface CalendarViewController : UIViewController<CalendarCollectionViewProviderDelegate>
 
-
+@property CalendarDatabase *DB;
 @end
 

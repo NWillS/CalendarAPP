@@ -12,7 +12,7 @@
 @interface CalendarViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *prevBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *nextBtn;
-@property (weak, nonatomic) IBOutlet CalendarCollectionView *collectionV;
+@property (weak, nonatomic) IBOutlet CalendarCollectionViewProvider *collectionV;
 @property NSString *month;
 @property NSString *day;
 
@@ -38,6 +38,9 @@
     
     self.collectionV.selectedDate = [NSDate date];
     [wself setSelectedDate:wself.collectionV.selectedDate];
+    
+    self.DB = [[CalendarDatabase alloc]init];
+    [self.DB SetupDB];
 }
 
 

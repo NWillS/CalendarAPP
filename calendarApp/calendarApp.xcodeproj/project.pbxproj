@@ -18,9 +18,12 @@
 		BE2EEE0B1ED3BCED004BFEFF /* calendarAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2EEE0A1ED3BCED004BFEFF /* calendarAppTests.m */; };
 		BE3A7B3B1ED3C5C300F0C4C9 /* DayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */; };
 		BE3A7B3C1ED3C5C300F0C4C9 /* DayOfWeekCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */; };
-		BE3A7B401ED3C69B00F0C4C9 /* CalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */; };
+		BE3A7B401ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.m */; };
 		BEB32B481EED13800018456A /* SelectedDay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB32B471EED13800018456A /* SelectedDay.storyboard */; };
 		BEB32B4B1EED140F0018456A /* SelectedDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */; };
+		BEB32B531EF57E840018456A /* CalendarDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B521EF57E840018456A /* CalendarDatabase.m */; };
+		BEB32B5B1EF5ADF10018456A /* TimeTableViewProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B5A1EF5ADF10018456A /* TimeTableViewProvider.m */; };
+		BEB32B5E1EF5AF6D0018456A /* HourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B5D1EF5AF6D0018456A /* HourCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,10 @@
 
 /* Begin PBXFileReference section */
 		38ED749CE4053C8F302E59F6 /* libPods-calendarApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-calendarApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6267D98E4F793653AC000A9B /* Pods-calendarAppTests.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.debug development.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.debug development.xcconfig"; sourceTree = "<group>"; };
+		83DF30F714532966C16182AC /* Pods-calendarApp.debug development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.debug development.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.debug development.xcconfig"; sourceTree = "<group>"; };
 		9B6F3D2547B040674681D134 /* libPods-calendarAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-calendarAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B664A969FFFD97E60C431E5B /* Pods-calendarApp.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.debug staging.xcconfig"; sourceTree = "<group>"; };
 		B9449BE42812D12CAC297119 /* Pods-calendarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.release.xcconfig"; sourceTree = "<group>"; };
 		BE2EEDED1ED3BCEC004BFEFF /* calendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2EEDF11ED3BCEC004BFEFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,16 +60,23 @@
 		BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCell.m; sourceTree = "<group>"; };
 		BE3A7B391ED3C5C300F0C4C9 /* DayOfWeekCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfWeekCell.h; sourceTree = "<group>"; };
 		BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOfWeekCell.m; sourceTree = "<group>"; };
-		BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarCollectionView.h; sourceTree = "<group>"; };
-		BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarCollectionView.m; sourceTree = "<group>"; };
+		BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarCollectionViewProvider.h; sourceTree = "<group>"; };
+		BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarCollectionViewProvider.m; sourceTree = "<group>"; };
 		BE3A7B411ED3D33B00F0C4C9 /* NSDate_NSDate_Extension_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDate_NSDate_Extension_.h; sourceTree = "<group>"; };
 		BEB32B471EED13800018456A /* SelectedDay.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SelectedDay.storyboard; sourceTree = "<group>"; };
 		BEB32B491EED140F0018456A /* SelectedDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedDayViewController.h; sourceTree = "<group>"; };
 		BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedDayViewController.m; sourceTree = "<group>"; };
 		BEB32B4C1EF578A50018456A /* CalendarApp.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarApp.pch; sourceTree = "<group>"; };
+		BEB32B511EF57E840018456A /* CalendarDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDatabase.h; sourceTree = "<group>"; };
+		BEB32B521EF57E840018456A /* CalendarDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDatabase.m; sourceTree = "<group>"; };
+		BEB32B591EF5ADF10018456A /* TimeTableViewProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTableViewProvider.h; sourceTree = "<group>"; };
+		BEB32B5A1EF5ADF10018456A /* TimeTableViewProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewProvider.m; sourceTree = "<group>"; };
+		BEB32B5C1EF5AF6D0018456A /* HourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourCell.h; sourceTree = "<group>"; };
+		BEB32B5D1EF5AF6D0018456A /* HourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourCell.m; sourceTree = "<group>"; };
 		C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8E52385ED92F0D52AB2708D /* Pods-calendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D8703829EDD07BE20D2FD873 /* Pods-calendarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E9B30644A44C624A402737B9 /* Pods-calendarAppTests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.debug staging.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +106,10 @@
 				B9449BE42812D12CAC297119 /* Pods-calendarApp.release.xcconfig */,
 				C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */,
 				D8703829EDD07BE20D2FD873 /* Pods-calendarAppTests.release.xcconfig */,
+				83DF30F714532966C16182AC /* Pods-calendarApp.debug development.xcconfig */,
+				B664A969FFFD97E60C431E5B /* Pods-calendarApp.debug staging.xcconfig */,
+				6267D98E4F793653AC000A9B /* Pods-calendarAppTests.debug development.xcconfig */,
+				E9B30644A44C624A402737B9 /* Pods-calendarAppTests.debug staging.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -129,17 +146,17 @@
 		BE2EEDEF1ED3BCEC004BFEFF /* calendarApp */ = {
 			isa = PBXGroup;
 			children = (
-				BEB32B501EF57BCE0018456A /* Models */,
 				BE2EEE151ED3BE58004BFEFF /* Controllers */,
+				BEB32B501EF57BCE0018456A /* Models */,
 				BE2EEDF01ED3BCEC004BFEFF /* Supporting Files */,
 				BE3A7B3D1ED3C5CB00F0C4C9 /* Views */,
 				BE2EEDF31ED3BCEC004BFEFF /* AppDelegate.h */,
 				BE2EEDF41ED3BCED004BFEFF /* AppDelegate.m */,
 				BE2EEDFC1ED3BCED004BFEFF /* Assets.xcassets */,
+				BEB32B4C1EF578A50018456A /* CalendarApp.pch */,
 				BE2EEE011ED3BCED004BFEFF /* Info.plist */,
 				BE2EEDFE1ED3BCED004BFEFF /* LaunchScreen.storyboard */,
 				BE3A7B411ED3D33B00F0C4C9 /* NSDate_NSDate_Extension_.h */,
-				BEB32B4C1EF578A50018456A /* CalendarApp.pch */,
 			);
 			path = calendarApp;
 			sourceTree = "<group>";
@@ -177,12 +194,8 @@
 		BE3A7B3D1ED3C5CB00F0C4C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionView.h */,
-				BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionView.m */,
-				BE3A7B371ED3C5C300F0C4C9 /* DayCell.h */,
-				BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */,
-				BE3A7B391ED3C5C300F0C4C9 /* DayOfWeekCell.h */,
-				BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */,
+				BEB32B551EF5AD390018456A /* SelectedDay */,
+				BEB32B541EF5AD290018456A /* Calendar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,8 +203,34 @@
 		BEB32B501EF57BCE0018456A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BEB32B511EF57E840018456A /* CalendarDatabase.h */,
+				BEB32B521EF57E840018456A /* CalendarDatabase.m */,
 			);
-			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BEB32B541EF5AD290018456A /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BE3A7B3E1ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.h */,
+				BE3A7B3F1ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.m */,
+				BE3A7B371ED3C5C300F0C4C9 /* DayCell.h */,
+				BE3A7B381ED3C5C300F0C4C9 /* DayCell.m */,
+				BE3A7B391ED3C5C300F0C4C9 /* DayOfWeekCell.h */,
+				BE3A7B3A1ED3C5C300F0C4C9 /* DayOfWeekCell.m */,
+			);
+			name = Calendar;
+			sourceTree = "<group>";
+		};
+		BEB32B551EF5AD390018456A /* SelectedDay */ = {
+			isa = PBXGroup;
+			children = (
+				BEB32B591EF5ADF10018456A /* TimeTableViewProvider.h */,
+				BEB32B5A1EF5ADF10018456A /* TimeTableViewProvider.m */,
+				BEB32B5C1EF5AF6D0018456A /* HourCell.h */,
+				BEB32B5D1EF5AF6D0018456A /* HourCell.m */,
+			);
+			name = SelectedDay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,10 +436,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE3A7B401ED3C69B00F0C4C9 /* CalendarCollectionView.m in Sources */,
+				BE3A7B401ED3C69B00F0C4C9 /* CalendarCollectionViewProvider.m in Sources */,
+				BEB32B5E1EF5AF6D0018456A /* HourCell.m in Sources */,
 				BE2EEDF81ED3BCED004BFEFF /* CalendarViewController.m in Sources */,
 				BE2EEDF51ED3BCED004BFEFF /* AppDelegate.m in Sources */,
 				BE3A7B3B1ED3C5C300F0C4C9 /* DayCell.m in Sources */,
+				BEB32B531EF57E840018456A /* CalendarDatabase.m in Sources */,
+				BEB32B5B1EF5ADF10018456A /* TimeTableViewProvider.m in Sources */,
 				BE3A7B3C1ED3C5C300F0C4C9 /* DayOfWeekCell.m in Sources */,
 				BE2EEDF21ED3BCEC004BFEFF /* main.m in Sources */,
 				BEB32B4B1EED140F0018456A /* SelectedDayViewController.m in Sources */,
@@ -542,7 +584,7 @@
 		};
 		BE2EEE101ED3BCED004BFEFF /* Debug DEVELOPMENT */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8E52385ED92F0D52AB2708D /* Pods-calendarApp.debug.xcconfig */;
+			baseConfigurationReference = 83DF30F714532966C16182AC /* Pods-calendarApp.debug development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
@@ -571,7 +613,7 @@
 		};
 		BE2EEE131ED3BCED004BFEFF /* Debug DEVELOPMENT */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */;
+			baseConfigurationReference = 6267D98E4F793653AC000A9B /* Pods-calendarAppTests.debug development.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = calendarAppTests/Info.plist;
@@ -647,7 +689,7 @@
 		};
 		BEB32B4E1EF57A610018456A /* Debug STAGING */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8E52385ED92F0D52AB2708D /* Pods-calendarApp.debug.xcconfig */;
+			baseConfigurationReference = B664A969FFFD97E60C431E5B /* Pods-calendarApp.debug staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PCCZJUYRT6;
@@ -662,7 +704,7 @@
 		};
 		BEB32B4F1EF57A610018456A /* Debug STAGING */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */;
+			baseConfigurationReference = E9B30644A44C624A402737B9 /* Pods-calendarAppTests.debug staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = calendarAppTests/Info.plist;

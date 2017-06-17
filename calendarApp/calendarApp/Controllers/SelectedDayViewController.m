@@ -7,9 +7,11 @@
 //
 
 #import "SelectedDayViewController.h"
+#import "TimeTableViewProvider.h"
 
 @interface SelectedDayViewController ()
 - (IBAction)back:(id)sender;
+@property (weak, nonatomic) IBOutlet  TimeTableViewProvider *tableView;
 
 @end
 
@@ -19,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = [NSString stringWithFormat:@"%@/%@",self.month,self.day];
+    
+    self.tableView.dataSource = self.tableView;
 }
 
 - (void)didReceiveMemoryWarning {

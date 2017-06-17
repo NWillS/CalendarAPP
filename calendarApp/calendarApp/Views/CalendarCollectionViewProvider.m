@@ -6,12 +6,13 @@
 //  Copyright © 2017年 swill. All rights reserved.
 //
 
-#import "CalendarCollectionView.h"
+#import "CalendarCollectionViewProvider.h"
 
-@interface CalendarCollectionView()
+@interface CalendarCollectionViewProvider()
 
 @end
 #import "DayCell.h"
+#import "DayOfWeekCell.h"
 
 typedef NS_ENUM(NSInteger,DayOfWeek){
     Sun = 0,
@@ -34,7 +35,7 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
 
 
 
-@implementation CalendarCollectionView
+@implementation CalendarCollectionViewProvider
 
 -(void)prevMonth{
     __weak typeof (self) wself = self;
@@ -121,13 +122,18 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DayCell *cell;
     if(indexPath.section == 0){
+        DayOfWeekCell *cell;
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"dayForWeekCell"
                                                          forIndexPath:indexPath];
         
         cell.label.text = dayAWeek[indexPath.row];
+        
+        cell.label.textColor = [self colorOfWeek:indexPath.row];
+        return cell;
     }else{
+        
+        DayCell *cell;
         cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell"
                                                          forIndexPath:indexPath];
         
@@ -141,13 +147,16 @@ static NSString * dayAWeek [7] = {@"日",@"月",@"火",@"水",@"木",@"金",@"�
         NSInteger month = [calendar component:NSCalendarUnitMonth fromDate:dateForCellAIP];
         if(month != currentMonth){
             cell.label.alpha = 0.4;
+            cell.circle.alpha = 0.4;
         }else{
             cell.label.alpha = 1.0;
+            cell.label.alpha = 1.0;
         }
+        
+        cell.label.textColor = [self colorOfWeek:indexPath.row];
+        cell.circle.textColor = [self colorOfWeek:indexPath.row];
+        return cell;
     }
-    
-    cell.label.textColor = [self colorOfWeek:indexPath.row];
-    return cell;
 }
 -(UIColor *)colorOfWeek:(NSInteger)indexPath{
     if(indexPath % DaysPerWeek == Sun){
