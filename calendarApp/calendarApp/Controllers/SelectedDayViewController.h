@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalendarDatabase.h"
+#import "TimeTableViewProvider.h"
 
-@interface SelectedDayViewController : UIViewController
-    @property (nonatomic ,strong) NSString *day;
-    @property (nonatomic ,strong) NSString *month;
+@interface SelectedDayViewController : UIViewController<TimeTableViewProviderDelegate>
+    @property (nonatomic ,strong) NSDate *date;
+    @property CalendarDatabase *DB;
 
 @end

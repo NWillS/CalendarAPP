@@ -13,4 +13,6 @@
     NSString *databasePath;
 }
 -(void)SetupDB;
+-(BOOL)isSetSchedule:(NSDate *)date;
+-(NSString *)getDetail:(NSDate *)date hour:(NSInteger)hour;
 @end

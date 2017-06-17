@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol TimeTableViewProviderDelegate<NSObject>
+- (NSString *)getText:(NSInteger)hour;
+@end
+
 @interface TimeTableViewProvider : UITableView<UITableViewDataSource>
+@property(nonatomic, retain) id<TimeTableViewProviderDelegate> myDelegate;
 
 @end
