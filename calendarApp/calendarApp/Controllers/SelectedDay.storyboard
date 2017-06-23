@@ -85,11 +85,20 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="I1z-fW-Ucj" id="mYG-0U-G0V"/>
+                        <segue destination="fb6-79-wY3" kind="show" identifier="toSelectedHour" id="7xN-De-Yn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puz-GS-aOZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2911.1999999999998" y="129.98500749625188"/>
+        </scene>
+        <!--detail-->
+        <scene sceneID="pcN-L8-Wvs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detail" referencedIdentifier="detail" id="fb6-79-wY3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UD1-Lr-fis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3558" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hmH-uX-0wX">

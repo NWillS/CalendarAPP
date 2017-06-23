@@ -7,10 +7,12 @@
 //
 
 #import "SelectedDayViewController.h"
+#import "DetailViewController.h"
 
 @interface SelectedDayViewController ()
 - (IBAction)back:(id)sender;
 @property (weak, nonatomic) IBOutlet  TimeTableViewProvider *tableView;
+@property NSInteger hour;
 
 @end
 
@@ -24,6 +26,7 @@
     self.title = [formatter stringFromDate:self.date];
     
     self.tableView.dataSource = self.tableView;
+    self.tableView.delegate = self.tableView;
     self.tableView.myDelegate = self;
 }
 
@@ -32,15 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
@@ -48,5 +42,18 @@
     
 -(NSString *)getText:(NSInteger)hour{
     return [self.DB getDetail:self.date hour:hour];
+}
+-(void)selectedHour:(NSInteger)hour{
+    self.hour = hour;
+        [self performSegueWithIdentifier:@"toSelectedHour" sender:self];
+}
+    
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"toSelectedHour"]) {
+        //遷移先のViewController
+        DetailViewController *nextViewController = [segue destinationViewController];
+        [nextViewController setHour:_hour];
+        [nextViewController setDB:self.DB];
+    }
 }
 @end

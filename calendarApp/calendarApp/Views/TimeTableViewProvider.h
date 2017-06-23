@@ -10,9 +10,10 @@
 
 @protocol TimeTableViewProviderDelegate<NSObject>
 - (NSString *)getText:(NSInteger)hour;
+- (void) selectedHour:(NSInteger)hour;
 @end
 
-@interface TimeTableViewProvider : UITableView<UITableViewDataSource>
+@interface TimeTableViewProvider : UITableView<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic, retain) id<TimeTableViewProviderDelegate> myDelegate;
 
 @end
