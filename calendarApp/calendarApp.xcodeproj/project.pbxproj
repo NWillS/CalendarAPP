@@ -24,6 +24,8 @@
 		BEB32B531EF57E840018456A /* CalendarDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B521EF57E840018456A /* CalendarDatabase.m */; };
 		BEB32B5B1EF5ADF10018456A /* TimeTableViewProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B5A1EF5ADF10018456A /* TimeTableViewProvider.m */; };
 		BEB32B5E1EF5AF6D0018456A /* HourCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B5D1EF5AF6D0018456A /* HourCell.m */; };
+		BEB32B601EF74A870018456A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEB32B5F1EF74A870018456A /* Detail.storyboard */; };
+		BEB32B631EF74AB50018456A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB32B621EF74AB50018456A /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,9 @@
 		BEB32B5A1EF5ADF10018456A /* TimeTableViewProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTableViewProvider.m; sourceTree = "<group>"; };
 		BEB32B5C1EF5AF6D0018456A /* HourCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HourCell.h; sourceTree = "<group>"; };
 		BEB32B5D1EF5AF6D0018456A /* HourCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HourCell.m; sourceTree = "<group>"; };
+		BEB32B5F1EF74A870018456A /* Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		BEB32B611EF74AB50018456A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BEB32B621EF74AB50018456A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		C07828C70D98C2355F2E4427 /* Pods-calendarAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8E52385ED92F0D52AB2708D /* Pods-calendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-calendarApp/Pods-calendarApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D8703829EDD07BE20D2FD873 /* Pods-calendarAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calendarAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-calendarAppTests/Pods-calendarAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +192,9 @@
 				BEB32B471EED13800018456A /* SelectedDay.storyboard */,
 				BEB32B491EED140F0018456A /* SelectedDayViewController.h */,
 				BEB32B4A1EED140F0018456A /* SelectedDayViewController.m */,
+				BEB32B5F1EF74A870018456A /* Detail.storyboard */,
+				BEB32B611EF74AB50018456A /* DetailViewController.h */,
+				BEB32B621EF74AB50018456A /* DetailViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,6 +333,7 @@
 				BEB32B481EED13800018456A /* SelectedDay.storyboard in Resources */,
 				BE2EEE001ED3BCED004BFEFF /* LaunchScreen.storyboard in Resources */,
 				BE2EEDFD1ED3BCED004BFEFF /* Assets.xcassets in Resources */,
+				BEB32B601EF74A870018456A /* Detail.storyboard in Resources */,
 				BE2EEDFB1ED3BCED004BFEFF /* Calendar.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +452,7 @@
 				BE3A7B3B1ED3C5C300F0C4C9 /* DayCell.m in Sources */,
 				BEB32B531EF57E840018456A /* CalendarDatabase.m in Sources */,
 				BEB32B5B1EF5ADF10018456A /* TimeTableViewProvider.m in Sources */,
+				BEB32B631EF74AB50018456A /* DetailViewController.m in Sources */,
 				BE3A7B3C1ED3C5C300F0C4C9 /* DayOfWeekCell.m in Sources */,
 				BE2EEDF21ED3BCEC004BFEFF /* main.m in Sources */,
 				BEB32B4B1EED140F0018456A /* SelectedDayViewController.m in Sources */,

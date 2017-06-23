@@ -22,7 +22,7 @@
     NSLog(@"%@",databasePath);
     _db = [FMDatabase databaseWithPath:databasePath];
     
-    NSString *sql = @"CREATE TABLE IF NOT EXISTS tr_calendar(date INTEGER PRIMARY KEY, hour INTEGER, text TEXT);";
+    NSString *sql = @"CREATE TABLE IF NOT EXISTS tr_calendar(date INTEGER , hour INTEGER, text TEXT ,PRIMARY KEY( date, hour));";
     
     [self.db open];
     [self.db executeUpdate:sql];
@@ -59,8 +59,8 @@
     FMResultSet *results = [self.db executeQuery:sql,[formatter stringFromDate:date],[NSNumber numberWithInteger:hour]];
     [results next];
     
-    text = [results stringForColumn:@"text"];
-    
+    text = [results stringForColumnIndex:0];
+
     [self.db close];
     return text;
 }

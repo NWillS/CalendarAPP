@@ -38,6 +38,12 @@
     
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    __weak typeof (self) wself = self;
+    NSInteger hour = (indexPath.row/2)*100 + indexPath.row % 2;
+    if([wself.myDelegate respondsToSelector:@selector(selectedHour:)]){
+        [wself.myDelegate selectedHour:hour];
+    }
+}
 
 @end
